@@ -1,0 +1,46 @@
+
+.all{
+	font-family : Hack, monospace;
+}
+.item1 {
+	margin: 10px;
+	color: brown;
+	font-size: 25px;
+	text-align: center;
+
+}
+
+.item2 {
+	margin: 50px;
+	color: saddlebrown;
+	font-size: 25px;
+	text-align : left;
+
+}
+
+.item3 {
+	margin: 100px;
+	color: rosybrown;
+	font-size: 25px;
+	text-align : right;
+
+}
+
+.item4 {
+	margin: 150px;
+	color: rosybrown;
+	font-size: 25px;
+	text-align : center;
+}
+
+.item5 {
+	margin: 200px;
+	color: sandybrown;
+	font-size: 25px;
+	text-align : center;
+
+}
+.explan{
+	font-size : 20px;
+	text-align : left;
+}
