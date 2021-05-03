@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+
+
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            box-shadow: 0 0 0 0px #000 inset;
+        }
+
+        div.left {
+            width: 10%;
+            float: left;
+            box-sizing: border-box;
+            background: black;
+            text-decoration-color: white;
+
+        }
+
+        .logo {
+            padding-top: 40px;
+            font-size: 20px;
+        }
+
+        .menu {
+            padding-top: 60px;
+            font-size: 20px;
+
+        }
+
+        div.right {
+            width: 90%;
+            float: right;
+            box-sizing: border-box;
+            background: #ece6cc;
+            overflow-X: scroll;
+            font-size 20px;
+
+        }
+
+        .right:last-child a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .right:last-child a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .right:last-child a:hover {
+            color: brown;
+            text-decoration: none;
+        }
+
+        li>a:link,
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        li>a:hover {
+            color: brown;
+            text-decoration: none;
+        }
+
+
+
+        .snap-container {
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            scroll-snap-align: start;
+            height: 100vh;
+            box-shadow: 0 0 0 1px #000 inset;
+
+        }
+
+        h2 {
+            margin: 0;
+            padding: 30px;
+        }
+
+        .inner_menu {
+            text-align: center;
+            width: 150px;
+            height: 150px;
+            padding: 0px;
+            margin: 13vh;
+            float: left;
+            box-shadow: 0 0 0 0px #000 inset;
+        }
+
+        .top {
+            position: relative;
+            height: auto;
+            border: 0;
+
+        }
+
+        .inner_menu_container {
+            box-shadow: 0 0 0 0px #000 inset;
+        }
+
+        .top_menu {
+            position: fixed;
+            top: 0px;
+            right: 50px;
+            z-index: 100;
+            height: 10vh;
+            width: auto;
+            padding: 0px;
+            font-size: 20px;
+            display: flex;
+
+        }
+
+        @media screen and (max-width: 1800px) {
+            .inner_menu {
+                margin: 8vh;
+            }
+
+            div.left {
+                width: 23%;
+            }
+
+            div.right {
+                width: 77%;
+                float: left;
+            }
+        }
+
+        @media screen and (max-width: 1590px) {
+            .inner_menu {
+                margin: 2vh;
+                margin-bottom: 5vh;
+            }
+
+            .menu {
+                padding: 0px;
+                padding-top: 30px;
+                font-size: 15px;
+
+            }
+
+            div.left {
+                width: 23%;
+            }
+
+            div.right {
+                width: 77%;
+            }
+
+            .top_menu {
+                top: 5px;
+                font-size: 13px;
+                right: 0px;
+            }
+
+            img {
+                width: 100px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 무한 스크롤 ajax 활용 -->
+    <div>
+        <div class="left">
+            <ul>
+                <li class="logo"><a href="#"><span>KIOSK</span></a></li>
+                <li class="menu"><a href="#section-01"><span>섹션1</span></a></li>
+                <li class="menu"><a href="#section-02"><span>섹션2</span></a></li>
+                <li class="menu"><a href="#section-03"><span>섹션3</span></a></li>
+                <li class="menu"><a href="#section-04"><span>섹션4</span></a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="snap-container">
+                <div class="top_menu">
+                    <h2><a href="#">주문내역</a></h2>
+                    <h2><a href="#">주문</a></h2>
+                </div>
+                <div id="section-01" class="section" pagenum="1">
+                    <div id="top" class="top">
+                        <h2>섹션1</h2>
+                    </div>
+                    <div class="inner_menu_container">
+                        <div class="inner_menu"><img src="img.jpg" width="150"><br>닭가슴살볶음밥<br>2000원<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                    </div>
+
+                </div>
+                <div id="section-02" class="section">
+                    <div class="top">
+                        <h2>섹션2</h2>
+                    </div>
+                    <div class="inner_menu_container">
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                    </div>
+                </div>
+                <div id="section-03" class="section">
+                    <div class="top">
+                        <h2>섹션3</h2>
+                    </div>
+                    <div class="inner_menu_container">
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                    </div>
+                </div>
+                <div id="section-04" class="section">
+                    <div class="top">
+                        <h2>섹션4</h2>
+                    </div>
+                    <div class="inner_menu_container">
+
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                        <div class="inner_menu"><img src="coffe.jpg" width="150"><br>메뉴<br>가격<br><button>담기</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
